@@ -1,0 +1,52 @@
+/*
+ * w1_a4_p3.c
+ *Description :Write a program to receive data into an array of 5 employees, then display the code,
+  name, and net salary for each.
+ *Note : This code has been written on DOSBox Emulator based on borland c compiler
+ * 	Created on: Oct 12, 2023
+ *      Author: Omar Medhat
+ */
+#include  <stdio.h>
+#include <conio.h>
+typedef struct employee
+{
+int ID ;
+float Age;
+float salary;
+float detuct ;
+float bonus ;
+char name[51];
+}employee;
+int main(void)
+{
+	employee data[5];
+	int counter ;
+	float net_salary[5] ;
+	clrscr();
+	for(counter = 0 ; counter<5 ; counter++)
+	{
+	printf("Enter employee %d name \n",counter+1);
+	flushall();
+	gets(data[counter].name);
+	printf("Enter ID \n");
+	scanf("%d",&data[counter].ID);
+	printf("Enter AGE \n");
+	scanf("%f",&data[counter].Age);
+	printf("Enter salaray \n");
+	scanf("%f",&data[counter].salary);
+	printf("Enter detuct \n");
+	scanf("%f",&data[counter].detuct);
+	printf("Enter bonus \n");
+	scanf("%f",&data[counter].bonus);
+	net_salary[counter] = data[counter].salary + data[counter].bonus - data[counter].detuct;
+	}
+	printf("****************\n");
+	for(counter = 0 ; counter<5 ; counter++)
+	{
+	printf("Employee's no %d name : %s \n" , counter+1 ,data[counter].name);
+	printf("Employee's ID : %d \n" , data[counter].ID) ;
+	printf("Employee's net salary %f \n ", net_salary[counter]) ;
+	printf(".........\n");
+	}	
+	getch();
+}

@@ -1,0 +1,16 @@
+#include  <stdio.h>
+#include <conio.h>
+typedef struct employee
+{
+char name[51];
+int code ;
+int net_salary ;
+}employee;
+int main(void)
+{
+	employee data1;
+	clrscr();
+	("Enter employee data \n")
+	flushall();
+	gets(data1.name);
+}
