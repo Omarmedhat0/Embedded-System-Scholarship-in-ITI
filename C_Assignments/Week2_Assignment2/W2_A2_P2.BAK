@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <conio.h>
+#size_of_arr 10
+void read_arr(int *arr,int size_of_array);
+void print_arr(int *arr,int size_of_array);
+void main (void)
+{
+	int arr[size_of_arr];
+	clrscr();
+	printf("Enetr the 10 elemnts of the array sequenatly\n");
+	read_arr(&arr,size_of_arr);
+	print_arr(&arr,size_of_arr);
+	getch();
+}
+void read_arr(int *arr,int size_of_array)
+{
+	int counter  ;
+	for (counter =0 ; counter<size_of_array; counter++)
+		{
+			scanf("%d",&arr[counter]);
+		} 
+}
+void print_arr(int *arr,int size_of_array)
+{
+	int counter  ;
+	for (counter =0 ; counter<size_of_array; counter++)
+		{
+			printf("%d  ",arr[counter]);
+		} 
+}
